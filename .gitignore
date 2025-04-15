@@ -1,0 +1,19 @@
+# Virtual environment
+__pycache__/
+*.pyc
+
+# DuckDB temporary files
+*.duckdb
+*.duckdb.wal
+
+# SQL temp files
+temp_*.sql
+
+# Profiling outputs
+profile_output/
+
+# Compressed archives
+*.zip
+
+# VS Code settings (optional)
+.vscode/
