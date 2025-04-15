@@ -1,0 +1,44 @@
+{
+    "result_set_size": 8,
+    "cumulative_rows_scanned": 1377778,
+    "cumulative_cardinality": 1000001,
+    "extra_info": {},
+    "cpu_time": 0.044887000000000045,
+    "blocked_thread_time": 0.0,
+    "rows_returned": 1,
+    "query_name": "CREATE TABLE t AS SELECT * FROM read_csv_auto('./data/10MB.csv');",
+    "latency": 0.061778,
+    "children": [
+        {
+            "result_set_size": 8,
+            "operator_timing": 0.013884999999999991,
+            "operator_rows_scanned": 0,
+            "cumulative_rows_scanned": 1377778,
+            "operator_cardinality": 1,
+            "operator_type": "BATCH_CREATE_TABLE_AS",
+            "cumulative_cardinality": 1000001,
+            "cpu_time": 0.044887000000000045,
+            "operator_name": "BATCH_CREATE_TABLE_AS",
+            "extra_info": {},
+            "children": [
+                {
+                    "operator_name": "READ_CSV_AUTO ",
+                    "cpu_time": 0.031002000000000054,
+                    "extra_info": {
+                        "Function": "READ_CSV_AUTO",
+                        "Projections": "a",
+                        "Estimated Cardinality": "1377778"
+                    },
+                    "cumulative_cardinality": 1000000,
+                    "operator_type": "TABLE_SCAN",
+                    "operator_cardinality": 1000000,
+                    "cumulative_rows_scanned": 1377778,
+                    "operator_rows_scanned": 1377778,
+                    "operator_timing": 0.031002000000000054,
+                    "result_set_size": 8000000,
+                    "children": []
+                }
+            ]
+        }
+    ]
+}
